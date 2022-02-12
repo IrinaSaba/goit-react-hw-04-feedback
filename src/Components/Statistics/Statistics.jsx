@@ -6,8 +6,8 @@ const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
        <p className={s['stat']}>Good: {good}</p>
        <p className={s['stat']}>Neutral: {neutral}</p>
        <p className={s['stat']}>Bad: {bad}</p>
-       <p className={s['stat']}>Total: {total}</p>
-       <p className={s['stat']}>Positive feedback: {positivePercentage}% </p>
+       <p className={s['stat']}>Total: {total()}</p>
+       <p className={s['stat']}>Positive feedback: {positivePercentage()}% </p>
       </>
     );
 }
@@ -17,7 +17,7 @@ Statistics.propTypes = {
    neutral: PropTypes.number.isRequired,
    bad: PropTypes.number.isRequired,
    total: PropTypes.func.isRequired,
-   positivePercentage: PropTypes.func.isRequired,
+   // positivePercentage: PropTypes.func.isRequired,
  }
 
 export default Statistics;

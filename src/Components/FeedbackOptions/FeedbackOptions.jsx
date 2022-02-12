@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import s from './FeedbackOptions.module.scss'
-const FeedbackOptions = ({options, onLeaveFeedback}) => {
+const FeedbackOptions = ({options, getFeedback}) => {
   let feeds = Object.keys(options)
    return (
     feeds.map(option => (
       // console.log(option)
         <button className={s["btn-search"]} key={option}
-          onClick={() => onLeaveFeedback(option)}
+          onClick={() => getFeedback(option)}
           type="button"
         > {option}
         </button>
@@ -16,8 +16,8 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.objectOf(PropTypes.number).isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
+  // options: PropTypes.objectOf(PropTypes.number).isRequired,
+  // getFeedback: PropTypes.func.isRequired,
 }
 
 
